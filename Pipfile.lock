@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "cfe1f0c0fd6604a64447f48a5ce86538acb9e5ebdfb538956cc6fddafd5398d3"
+            "sha256": "2bd1ca69d682a3d28e486acb532d98758a3d9cb071e54c32ad8f7ebe354008a3"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -103,11 +103,8 @@
             "version": "==3.0.5"
         },
         "django-telegrambot": {
-            "hashes": [
-                "sha256:9cd222e8fa82eaab5bca251842f9eab061fac2280eb485b3666cf28994ad7474"
-            ],
-            "index": "pypi",
-            "version": "==1.0.1"
+            "git": "https://github.com/GoddessEyes/django-telegrambot.git",
+            "ref": "c60f84d6636a25424b128b0851c67ec7f2b3ce7b"
         },
         "future": {
             "hashes": [
@@ -121,6 +118,15 @@
                 "sha256:7582ad22678f0fcd81102833f60ef8d0e57288b6b5fb00323d101be910e35705"
             ],
             "version": "==2.20"
+        },
+        "pysocks": {
+            "hashes": [
+                "sha256:08e69f092cc6dbe92a0fdd16eeb9b9ffbc13cadfe5ca4c7bd92ffb078b293299",
+                "sha256:2725bd0a9925919b9b51739eea5f9e2bae91e83288108a9ad338b2e3a4435ee5",
+                "sha256:3f8804571ebe159c380ac6de37643bb4685970655d3bba243530d6558b799aa0"
+            ],
+            "index": "pypi",
+            "version": "==1.7.1"
         },
         "python-telegram-bot": {
             "hashes": [
@@ -251,6 +257,21 @@
             ],
             "index": "pypi",
             "version": "==2.5.0"
+        },
+        "pylint-django": {
+            "hashes": [
+                "sha256:06a64331c498a3f049ba669dc0c174b92209e164198d43e589b1096ee616d5f8",
+                "sha256:3d3436ba8d0fae576ae2db160e33a8f2746a101fda4463f2b3ff3a8b6fccec38"
+            ],
+            "index": "pypi",
+            "version": "==2.0.15"
+        },
+        "pylint-plugin-utils": {
+            "hashes": [
+                "sha256:2f30510e1c46edf268d3a195b2849bd98a1b9433229bb2ba63b8d776e1fc4d0a",
+                "sha256:57625dcca20140f43731311cd8fd879318bf45a8b0fd17020717a8781714a25a"
+            ],
+            "version": "==0.6"
         },
         "six": {
             "hashes": [
