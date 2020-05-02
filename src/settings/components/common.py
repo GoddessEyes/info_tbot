@@ -7,7 +7,10 @@ SECRET_KEY = 'onv&90%4i0g#64w_*e-q!dmit-dxfe=@fr###ou!0rju85rw+f'
 
 ALLOWED_HOSTS = ('*', )
 
+AUTH_USER_MODEL = 'management.CustomUser'
+
 DJANGO_APPS = (
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -22,6 +25,7 @@ THIRD_PARTY_APPS = (
 
 LOCAL_APPS = (
     'apps.tg_handler',
+    'apps.management'
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

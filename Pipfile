@@ -14,7 +14,7 @@ django = "*"
 python-telegram-bot = "*"
 pysocks = "*"
 django-telegrambot = {git = 'https://github.com/GoddessEyes/django-telegrambot.git'}
-
+django-grappelli = "*"
 
 [requires]
 python_version = "3.8"

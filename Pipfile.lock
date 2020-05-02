@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2bd1ca69d682a3d28e486acb532d98758a3d9cb071e54c32ad8f7ebe354008a3"
+            "sha256": "fcbf76a460f4ac344aa10a380624a606209316702d30e6a9e8820c0caf86d71b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -101,6 +101,13 @@
             ],
             "index": "pypi",
             "version": "==3.0.5"
+        },
+        "django-grappelli": {
+            "hashes": [
+                "sha256:1ac962129025bec8cca4647c87d2a538ddb4d481cb218b88042d676d1c726825"
+            ],
+            "index": "pypi",
+            "version": "==2.14.1"
         },
         "django-telegrambot": {
             "git": "https://github.com/GoddessEyes/django-telegrambot.git",
