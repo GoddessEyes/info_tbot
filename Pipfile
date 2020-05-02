@@ -12,8 +12,9 @@ pylint-django = "*"
 [packages]
 django = "*"
 python-telegram-bot = "*"
-django-telegrambot = {git = 'https://github.com/GoddessEyes/django-telegrambot.git'}
 pysocks = "*"
+django-telegrambot = {git = 'https://github.com/GoddessEyes/django-telegrambot.git'}
+
 
 [requires]
 python_version = "3.8"

@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:12
+    ports:
+      - 5432:5432
+    volumes:
+      - ./var/postgresql-data/:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_DB: agima_vehicledata_dev
+      POSTGRES_USER: agima_vehicledata_dev
+      POSTGRES_PASSWORD: agima_vehicledata_dev
+
+  redis:
+    image: redis:5-alpine
+    ports:
+      - "6379:6379"

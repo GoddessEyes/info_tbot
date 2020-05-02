@@ -7,7 +7,6 @@ exclude =
 				__init__.py,
 				manage.py,
 				*/settings/*,
-				./src/vehicledata/common/validators.py  # invalid-sequence in regular expression.
 
 max-line-length = 99
 accept-encodings = utf-8

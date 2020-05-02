@@ -104,7 +104,7 @@
         },
         "django-telegrambot": {
             "git": "https://github.com/GoddessEyes/django-telegrambot.git",
-            "ref": "c60f84d6636a25424b128b0851c67ec7f2b3ce7b"
+            "ref": "aa84eff326f799de4f734914b85c13af56ce9955"
         },
         "future": {
             "hashes": [

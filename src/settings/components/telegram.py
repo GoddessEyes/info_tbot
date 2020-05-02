@@ -10,7 +10,8 @@ DJANGO_TELEGRAMBOT = {
             'TOKEN': os.getenv('BOT_TOKEN'),
             'PROXY': {
                 'proxy_url': os.getenv('PROXY_URL'),
-            }
+            },
+            'CONTEXT': True
         },
     ],
 
