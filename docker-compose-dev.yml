@@ -8,9 +8,9 @@ services:
     volumes:
       - ./var/postgresql-data/:/var/lib/postgresql/data/
     environment:
-      POSTGRES_DB: agima_vehicledata_dev
-      POSTGRES_USER: agima_vehicledata_dev
-      POSTGRES_PASSWORD: agima_vehicledata_dev
+      POSTGRES_DB: info_tbot
+      POSTGRES_USER: info_tbot
+      POSTGRES_PASSWORD: info_tbot
 
   redis:
     image: redis:5-alpine

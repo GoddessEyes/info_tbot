@@ -1,4 +1,5 @@
 from settings.components.common import *
+from settings.components.db import *
 from settings.components.telegram import *
 
 
@@ -31,7 +32,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Vladivostok'
 
 USE_I18N = True
 
