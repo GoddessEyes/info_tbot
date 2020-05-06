@@ -1,10 +1,9 @@
+from apps.management.validators import validate_tgusername
 from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.db import models
-from telegram.ext import Filters
 from django.utils.translation import gettext_lazy as _
-
-from apps.management.validators import validate_tgusername
+from telegram.ext import Filters
 
 
 class CustomUser(AbstractUser):

@@ -1,27 +1,24 @@
 import logging
-from threading import Thread
-
-from django_telegrambot.apps import DjangoTelegramBot
-from telegram import Update
-from telegram.ext import CallbackContext, CommandHandler, Filters
 import os
 import sys
+from threading import Thread
+
 from apps.management.models import CustomUser
+from apps.tg_handler.generators import CommandStaticTextGenerator, MessageStaticTextGenerator
+from django_telegrambot.apps import DjangoTelegramBot
+from telegram.ext import CommandHandler
+
 
 logger = logging.getLogger(__name__)
-
-
-def start(update: Update, context: CallbackContext):
-    update.message.bot.sendMessage(update.message.chat_id, text='Hi!')
 
 
 def main():
     logger.info("Loading handlers for telegram bot")
     dp = DjangoTelegramBot.dispatcher
-    dp.add_handler(CommandHandler("start", start))
+    CommandStaticTextGenerator.init_handlers_for_tg(dp)
+    MessageStaticTextGenerator.init_handlers_for_tg(dp)
 
     def stop_and_restart():
-        """Gracefully stop the Updater and replace the current process with a new one"""
         dp.stop()
         os.execl(sys.executable, sys.executable, *sys.argv)
 
@@ -29,6 +26,14 @@ def main():
         update.message.reply_text('Bot is restarting...')
         Thread(target=stop_and_restart).start()
 
-    dp.add_handler(
-        CommandHandler('r', restart, filters=CustomUser.get_tgfilters_managers_username())
-    )
+    try:
+        dp.add_handler(
+            CommandHandler(
+                'restart', restart, filters=CustomUser.get_tgfilters_managers_username()
+            )
+        )
+    except ValueError:
+        # Нет ни одного пользователя. Первый запуск бота или никому не назначены права.
+        dp.add_handler(
+            CommandHandler('restart', restart)
+        )

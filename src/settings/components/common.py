@@ -20,12 +20,13 @@ DJANGO_APPS = (
 )
 
 THIRD_PARTY_APPS = (
-    'django_telegrambot',
+    'emoji_picker',
 )
 
 LOCAL_APPS = (
     'apps.tg_handler',
-    'apps.management'
+    'apps.management',
+    'apps.static_handlers',
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
