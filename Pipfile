@@ -17,6 +17,7 @@ django-telegrambot = {git = 'https://github.com/GoddessEyes/django-telegrambot.g
 django-grappelli = "*"
 django-emoji-picker = "*"
 psycopg2-binary = "*"
+django-solo = "*"
 
 [requires]
 python_version = "3.8"

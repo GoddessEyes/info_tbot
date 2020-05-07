@@ -4,7 +4,11 @@ import sys
 from threading import Thread
 
 from apps.management.models import CustomUser
-from apps.tg_handler.generators import CommandStaticTextGenerator, MessageStaticTextGenerator
+from apps.tg_handler.generators import (
+    CommandStaticTextGenerator,
+    MessageStaticTextGenerator,
+    StartBotHandlerGenerator,
+)
 from django_telegrambot.apps import DjangoTelegramBot
 from telegram.ext import CommandHandler
 
@@ -17,6 +21,7 @@ def main():
     dp = DjangoTelegramBot.dispatcher
     CommandStaticTextGenerator.init_handlers_for_tg(dp)
     MessageStaticTextGenerator.init_handlers_for_tg(dp)
+    StartBotHandlerGenerator.init_handlers_for_tg(dp)
 
     def stop_and_restart():
         dp.stop()

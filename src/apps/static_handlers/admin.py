@@ -1,20 +1,10 @@
-from apps.static_handlers.models import StaticCommandHandler
-from django import forms
+from apps.static_handlers.forms import StaticContentHandlerEmodjiFieldForm
+from apps.static_handlers.models import StartBotHandler, StaticContentHandler
 from django.contrib import admin
-from emoji_picker.widgets import EmojiPickerTextareaAdmin
+from solo.admin import SingletonModelAdmin
 
 
-class EmodjiFieldForm(forms.ModelForm):
-    text = forms.CharField(widget=EmojiPickerTextareaAdmin)
-    handler_name = forms.CharField()
-    handler_type = forms.ChoiceField(choices=StaticCommandHandler.HANDLER_TYPE_CHOICES)
-
-    class Meta:
-        model = StaticCommandHandler
-        fields = ('text', 'handler_name', 'handler_type')
-
-
-@admin.register(StaticCommandHandler)
+@admin.register(StaticContentHandler)
 class StaticCommandHandlerAdmin(admin.ModelAdmin):
     list_display = (
         'handler_name',
@@ -22,4 +12,11 @@ class StaticCommandHandlerAdmin(admin.ModelAdmin):
         'text'
     )
 
-    form = EmodjiFieldForm
+    form = StaticContentHandlerEmodjiFieldForm
+
+
+@admin.register(StartBotHandler)
+class StartBotHandlerAdmin(SingletonModelAdmin):
+    list_display = (
+        'handler_name',
+    )
