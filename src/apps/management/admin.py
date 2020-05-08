@@ -1,7 +1,8 @@
-from apps.management.models import CustomUser
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
+
+from apps.management.models import CustomUser
 
 
 @admin.register(CustomUser)

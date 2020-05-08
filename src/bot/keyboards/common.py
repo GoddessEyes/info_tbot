@@ -17,6 +17,7 @@ def build_menu(
 
 def build_three_column_menu(buttons: list) -> ReplyKeyboardMarkup:
     """Построение обычного меню в три колонки."""
+
     menu = build_menu(
         buttons,
         n_cols=3,

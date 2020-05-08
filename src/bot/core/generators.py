@@ -19,7 +19,7 @@ class HandlerGenerator(metaclass=ABCMeta):
 
     @classmethod
     @abstractmethod
-    def init_handlers_for_tg(cls, dp=None) -> None:
+    def self_load(cls, dp=None) -> None:
         """Загрузка телеграм-хэндлэров.
         Пример:
         handlers = YourModel.objects.all()

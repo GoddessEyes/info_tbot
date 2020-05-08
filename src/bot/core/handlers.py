@@ -1,5 +1,6 @@
-from apps.core.filters import StringFilter
 from telegram.ext import MessageHandler
+
+from bot.core.filters import StringFilter
 
 
 class StringHandler(MessageHandler):

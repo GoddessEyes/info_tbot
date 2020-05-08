@@ -1,6 +1,7 @@
-from apps.static_handlers.models import StaticContentHandler
 from django import forms
 from emoji_picker.widgets import EmojiPickerTextareaAdmin, EmojiPickerTextInput
+
+from apps.static_handlers.models import StaticContentHandler
 
 
 class StaticContentHandlerEmodjiFieldForm(forms.ModelForm):

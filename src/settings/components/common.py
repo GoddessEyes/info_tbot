@@ -33,7 +33,7 @@ THIRD_PARTY_APPS = (
 )
 
 LOCAL_APPS = (
-    'apps.tg_handler',
+    'bot',
     'apps.management',
     'apps.static_handlers',
     'apps.buttons',
